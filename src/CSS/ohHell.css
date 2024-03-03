@@ -1,0 +1,31 @@
+.oh-wrapper {
+    width: 100vw;
+    height: 100vh;
+    background-color: var(--bg-dark);
+}
+
+.oh-menu {
+    height: 70px;
+    width: 100%;
+}
+
+.oh-body {
+    height: calc(100% - 70px);
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+}
+
+.oh-footer {
+    width: 100%;
+    position: absolute;
+    bottom: 0px;
+    color: var(--accent);
+    font-size: 18px;
+}
+
+.oh-footer > p {
+    width: 100vw;
+    text-align: center;
+    margin-bottom: 10px;
+}
