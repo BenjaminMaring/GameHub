@@ -1,0 +1,37 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+    --bgDark: #172A3A;
+    --secondary: #004346;
+    --accent: #09BC8A;
+    --lightBlue: #74B3CE;
+    --font: "Open Sans", sans-serif;
+  }
+
+* {
+    margin: 0px;
+    padding: 0px;
+    font-family: var(--font)
+  }
+
+.open-font {
+    font-family: "Open Sans", sans-serif;
+}
+
+.box-shadow {
+    box-shadow: 1px 1px 10px 1px rgba(0, 0, 0, 0.295);
+}
+
+.shadow {
+    text-shadow: rgba(0, 0, 0, 0.5) 2px 0px 10px;
+}
+
+.no-shadow {
+    text-shadow: none !important;
+}
+
+.link {
+    text-decoration: underline black;
+}

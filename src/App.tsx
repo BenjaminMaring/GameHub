@@ -1,5 +1,4 @@
 import OhHell from './Pages/OhHell'
-import './App.css'
 
 function App() {
 
