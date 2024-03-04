@@ -42,3 +42,7 @@
 .link {
     text-decoration: underline black;
 }
+
+.btn-border {
+  border-radius: 5px;
+}
