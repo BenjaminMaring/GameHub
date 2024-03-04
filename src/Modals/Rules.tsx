@@ -8,15 +8,15 @@ export default function Rules() {
     <>
       <Button 
         onClick={() => setOpenModal(true)}
-        className="bg-secondary w-[70%] m-[20px] no-shadow box-shadow"
+        className="bg-secondary w-[70%] m-[20px] no-shadow box-shadow max-w-[180px]"
         >
         <p className="text-lg">How to play</p>
         </Button>
 
-      <Modal dismissible show={openModal} onClose={() => setOpenModal(false)}>
-        <Modal.Header className="no-shadow">Getting Started</Modal.Header>
-        <Modal.Body>
-            <Accordion>
+      <Modal dismissible show={openModal} onClose={() => setOpenModal(false)} className="">
+        <Modal.Header className="no-shadow max-h-[60px]">Getting Started</Modal.Header>
+        <Modal.Body className="max-h-[80%]">
+            <Accordion className="max-h-[80%] overflow-scroll">
                 <Accordion.Panel>
                     <Accordion.Title>Setup</Accordion.Title>
                     <Accordion.Content>
@@ -33,7 +33,7 @@ export default function Rules() {
                     </p>
                     </Accordion.Content>
                 </Accordion.Panel>
-                <Accordion.Panel>
+                <Accordion.Panel className="mb-5">
                     <Accordion.Title>Scoring</Accordion.Title>
                     <Accordion.Content>
                     <p className="mb-2 no-shadow">
@@ -42,7 +42,7 @@ export default function Rules() {
                 </Accordion.Panel>
             </Accordion>
         </Modal.Body>
-        <Modal.Footer className="no-shadow">
+        {/* <Modal.Footer className="no-shadow">
             Credit to &nbsp;
             <a
                 target="_blank" 
@@ -50,7 +50,7 @@ export default function Rules() {
                 className="link">
                 playingcarddecks.com
             </a>
-        </Modal.Footer>
+        </Modal.Footer> */}
       </Modal>
     </>
   );

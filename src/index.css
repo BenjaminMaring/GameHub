@@ -16,6 +16,13 @@
     font-family: var(--font)
   }
 
+  body {
+    height: 100vh;
+    background-color: var(--bgDark);
+    position: fixed;
+    /* overflow-x: hidden; */
+  }
+
 .open-font {
     font-family: "Open Sans", sans-serif;
 }
@@ -24,8 +31,8 @@
     box-shadow: 1px 1px 10px 1px rgba(0, 0, 0, 0.295);
 }
 
-.shadow {
-    text-shadow: rgba(0, 0, 0, 0.5) 2px 0px 10px;
+.t-shadow {
+    text-shadow: rgba(0, 0, 0, 0.651) 2px 1px 10px;
 }
 
 .no-shadow {
