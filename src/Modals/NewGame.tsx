@@ -45,6 +45,16 @@ export default function NewGame() {
     }
   }
 
+  const goToGame = () => {
+    saveNewGame();
+    
+  }
+
+  const saveNewGame = () => {
+    localStorage.setItem('currentPlayers', JSON.stringify(players));
+    localStorage.setItem('currentRound', JSON.stringify({round: 1}));
+  }
+
   const playerElems = players.map((player, index) => {
     return (
         <div key={index} className="text-xl sm:text-2xl m-2 flex items-center">
