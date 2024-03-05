@@ -1,15 +1,19 @@
 import { Button, Modal } from 'flowbite-react';
-import { useState, KeyboardEvent } from 'react';
+import { useState, useEffect, KeyboardEvent } from 'react';
+import { useNavigate } from 'react-router-dom';
 
 interface Player {
     name: String,
-    total: Number,
+    totals: number[],
+    bets: number[],
+    wins: number[]
 }
 
 export default function NewGame() {
   const [openModal, setOpenModal] = useState(false);
   const [players, setPlayers] = useState<Player[]>([])
   const [newPlayer, setNewPlayer] = useState("");
+  const navigate = useNavigate();
 
   const handleModal = () => {
     if (openModal) {
@@ -26,7 +30,7 @@ export default function NewGame() {
   }
 
   const addUser = () => {
-    setPlayers(prev => [...prev, {name: newPlayer, total: 0}]);
+    setPlayers(prev => [...prev, {name: newPlayer, totals: [0], bets: [0], wins: [0]}]);
     setNewPlayer("")
   }
 
@@ -35,8 +39,6 @@ export default function NewGame() {
     newArray.splice(index, 1);
     setPlayers(newArray);
   }
-
-  console.log(players);
 
   const addUserOnEnterKey = (event: KeyboardEvent<HTMLInputElement>) => {
     if (event.key === 'Enter') {
@@ -47,7 +49,7 @@ export default function NewGame() {
 
   const goToGame = () => {
     saveNewGame();
-    
+    navigate("/play")
   }
 
   const saveNewGame = () => {
@@ -99,6 +101,7 @@ export default function NewGame() {
                     >Add</button>
                   <button
                     className="text-xl w-[100px] bg-accent text-white text-3xl btn-border"
+                    onClick={goToGame}
                     >Start</button>
                 </div> 
                 <div className="border-t w-[100%] p-3 flex flex-wrap max-h-[300px]">

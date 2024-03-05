@@ -14,14 +14,14 @@
     margin: 0px;
     padding: 0px;
     font-family: var(--font)
-  }
+}
 
-  body {
-    height: 100vh;
-    background-color: var(--bgDark);
-    position: fixed;
-    /* overflow-x: hidden; */
-  }
+body {
+  height: 100vh;
+  background-color: var(--bgDark);
+  position: fixed;
+  /* overflow-x: hidden; */
+}
 
 .open-font {
     font-family: "Open Sans", sans-serif;

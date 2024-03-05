@@ -8,7 +8,7 @@ export default function Rules() {
     <>
       <Button 
         onClick={() => setOpenModal(true)}
-        className="bg-secondary w-[70%] m-[20px] no-shadow box-shadow max-w-[180px]"
+        className="bg-secondary w-[70%] m-[20px] no-shadow box-shadow w-[180px]"
         >
         <p className="text-lg">How to play</p>
         </Button>
