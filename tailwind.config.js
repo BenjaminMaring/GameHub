@@ -10,7 +10,8 @@ export default {
       bgDark: "#172A3A",
       secondary: "#004346",
       accent: "#09BC8A",
-      lightBlue: "#74B3CE"
+      lightBlue: "#74B3CE",
+      grey: "#808080"
     },
     fontFamily: {
       font: ["Open Sans", "sans-serif"]

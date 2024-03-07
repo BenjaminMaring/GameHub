@@ -7,6 +7,7 @@
     --secondary: #004346;
     --accent: #09BC8A;
     --lightBlue: #74B3CE;
+    --grey: #808080;
     --font: "Open Sans", sans-serif;
   }
 
@@ -45,4 +46,9 @@ body {
 
 .btn-border {
   border-radius: 5px;
+}
+
+.gradient {
+    background: linear-gradient(0deg, rgba(255,255,255,0) 0%, rgba(23,42,58,1) 100%);
+    z-index: 3;
 }

@@ -54,7 +54,7 @@ export default function NewGame() {
 
   const saveNewGame = () => {
     localStorage.setItem('currentPlayers', JSON.stringify(players));
-    localStorage.setItem('currentRound', JSON.stringify({round: 1}));
+    localStorage.setItem('currentRound', JSON.stringify(1));
   }
 
   const playerElems = players.map((player, index) => {
